@@ -7,9 +7,9 @@
 </head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  
+  <script> CMS.init();</script>
   <script>
-    CMS.init();
+   
     // GitHub authentication callback
     const params = new URLSearchParams(window.location.search);
     if (params.has('token')) {
