@@ -1,15 +1,15 @@
 backend:
   name: github
-  repo: lntuandat/CMSNhom10  # Tên repo GitHub của bạn
-  branch: main # Hoặc tên nhánh mà bạn muốn sử dụng
-  auth_type: pkce # Hoặc sử dụng `auth_type: pkce` để bảo mật hơn
-  app_id: Ov23ct6LX9i2UpRbCOnM # Client ID từ OAuth App trên GitHub
+  repo: lntuandat/CMSNhom10
+  branch: main 
+  auth_type: pkce 
+  app_id: Ov23ct6LX9i2UpRbCOnM
   base_url: https://cms-nhom10.vercel.app/
   auth_endpoint: /admin/
   cms_label_prefix: Vercel
 
-media_folder: "images/uploads" # Thư mục lưu trữ hình ảnh trên repo
-public_folder: "/images/uploads" # Thư mục hình ảnh công khai
+media_folder: "images/uploads"
+public_folder: "/images/uploads" 
 
 collections:
   - name: "pages"
