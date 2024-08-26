@@ -4,7 +4,7 @@ backend:
   branch: main # Hoặc tên nhánh mà bạn muốn sử dụng
   auth_type: implicit # Hoặc sử dụng `auth_type: pkce` để bảo mật hơn
   app_id: Ov23li6DYEU120Wr0rSn # Client ID từ OAuth App trên GitHub
-  base_url: https://nhom10-cms-baocao.vercel.app/
+  base_url: https://cms-nhom10.vercel.app/
   auth_endpoint: /admin/auth
   cms_label_prefix: Vercel
 
