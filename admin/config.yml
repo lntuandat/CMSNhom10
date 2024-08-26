@@ -4,7 +4,7 @@ backend:
   branch: main 
   auth_type: pkce 
   app_id: Ov23ct6LX9i2UpRbCOnM
-  base_url: https://cms-nhom10.vercel.app/
+  base_url: https://cms-nhom10.vercel.app/admin/
   
   cms_label_prefix: Vercel
 
