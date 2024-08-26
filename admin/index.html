@@ -13,7 +13,8 @@
     const params = new URLSearchParams(window.location.search);
     if (params.has('token')) {
       // Lưu trữ token vào localStorage
-      localStorage.setItem('netlify-cms-user', JSON.stringify({ token: params.get('token') }));
+      localStorage.setItem('decap-cms-user', JSON.stringify({ token: params.get('token') }));
+
       // Chuyển hướng người dùng trở lại trang quản trị
       window.location.href = '/admin/';
     }
