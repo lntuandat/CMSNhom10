@@ -3,59 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Admin</title>
 </head>
 <body>
-
-  <!-- Load Decap CMS -->
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@latest/dist/decap-cms.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // GitHub authentication callback
-      const params = new URLSearchParams(window.location.search);
-      if (params.has('token')) {
-        try {
-          localStorage.setItem('decap-cms-user', JSON.stringify({ token: params.get('token') }));
-          window.location.href = '/admin/';
-        } catch (error) {
-          console.error('Error storing token or redirecting:', error);
-        }
-      }
+    
+    // GitHub authentication callback
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('token')) {
+      // Lưu trữ token vào localStorage
+      localStorage.setItem('decap-cms-user', JSON.stringify({ token: params.get('token') }));
 
-      // Initialize CMS after handling token
-      CMS.init({
-        config: {
-          backend: {
-            name: 'github',
-            repo: 'lntuandat/CMSNhom10',
-            branch: 'main',
-            auth_type: 'pkce',
-            app_id: 'Ov23ct6LX9i2UpRbCOnM',
-          },
-          media_folder: 'images/uploads',
-          public_folder: '/images/uploads',
-          collections: [
-            {
-              name: 'pages',
-              label: 'Pages',
-              files: [
-                {
-                  name: 'index',
-                  label: 'Home Page',
-                  file: 'index.html',
-                  fields: [
-                    { label: 'Title', name: 'title', widget: 'string' },
-                    { label: 'Content', name: 'content', widget: 'text' },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      });
-    });
+      // Chuyển hướng người dùng trở lại trang quản trị
+      window.location.href = '/admin/';
+    }
   </script>
-
 </body>
 </html>
